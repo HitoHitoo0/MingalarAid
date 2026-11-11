@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MingalarAid connects disaster-affected communities with assistance, volunteers and donors across Myanmar.">
+  <title>MingalarAid — Together, We Can Rebuild Hope</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="MingalarAid home"><img src="assets/mingalaraid-mark.svg" alt=""><span>Mingalar<span class="brand-accent">Aid</span></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+  <nav id="mainNav">
+    <a href="#home">Home</a><a href="#about">About Us</a><a href="#disasters">Disaster Updates</a>
+    <a href="#assistance">Request Assistance</a><a href="#donation">Donation</a><a href="#volunteer">Volunteer</a>
+  </nav>
+  <div class="header-actions"><a class="login-link" href="#auth">Login / Register</a><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button></div>
+</header>
+
+<main>
+<section id="home" class="hero section-wrap">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> FORM YANMAR. FOR EACH OTHER.</div>
+    <h1>Together, We Can<br><span>Rebuild Hope.</span></h1>
+    <p>Stay informed, request help, and support communities affected by disasters across Myanmar.</p>
+    <div class="hero-buttons"><a class="btn btn-primary" href="#assistance">Request Assistance <span>→</span></a><a class="btn btn-outline" href="#disasters">View Disaster Updates</a></div>
+    <div class="hero-note"><span>✦</span> Connecting communities with care, information and support.</div>
+  </div>
+  <div class="hero-art"><img src="assets/relief-illustration.svg" alt="Illustration of volunteers helping a community"><div class="floating-card"><span class="card-icon">♡</span><div><strong>Every helping hand matters.</strong><small>Find help. Give support.</small></div></div></div>
+</section>
+
+<section class="impact-strip section-wrap">
+  <div><strong>Immediate Relief</strong><span>Connect people with urgent assistance and essential supplies.</span></div>
+  <div><strong>Support Affected Families</strong><span>Bring communities, donors and relief teams together.</span></div>
+  <div><strong>Build Resilient Communities</strong><span>Share knowledge and prepare together.</span></div>
+</section>
+
+<section id="disasters" class="content-section section-wrap">
+  <div class="section-heading"><div><div class="eyebrow">KNOW WHAT'S HAPPENING</div><h2>Latest Disaster Updates</h2><p>Understand the situation. Make informed, safer decisions.</p></div><span class="sample-tag">SAMPLE REPORTS · NOT LIVE DATA</span></div>
+  <div class="filter-row"><input id="disasterSearch" type="search" placeholder="Search disaster reports"><select id="regionFilter"><option value="">All states and regions</option><option>Mandalay Region</option><option>Bago Region</option><option>Shan State</option><option>Kayin State</option></select></div>
+  <div id="disasterList" class="disaster-grid">
+    <article class="disaster-card"><div class="disaster-image flood-one"><span>FLOOD</span></div><div class="disaster-body"><div class="meta">27 Sep 2024 · Myanmar</div><h3>Flooding across Myanmar</h3><p>Illustrative overview of flood-related needs across multiple states and regions.</p><div class="card-actions"><a href="#donation">Donate</a><a href="#volunteer">Volunteer</a></div></div></article>
+    <article class="disaster-card"><div class="disaster-image flood-two"><span>FLOOD</span></div><div class="disaster-body"><div class="meta">22 Sep 2024 · Mandalay Region</div><h3>Flood impacts across central Myanmar</h3><p>Sample report showing how local access and essential supplies could be presented.</p><div class="card-actions"><a href="#donation">Donate</a><a href="#volunteer">Volunteer</a></div></div></article>
+    <article class="disaster-card"><div class="disaster-image flood-three"><span>FLOOD</span></div><div class="disaster-body"><div class="meta">18 Sep 2024 · Taungoo, Bago</div><h3>Sittaung River flooding in Taungoo</h3><p>Illustrative township-level update with space for local context and relief information.</p><div class="card-actions"><a href="#donation">Donate</a><a href="#volunteer">Volunteer</a></div></div></article>
+  </div>
+</section>
+
+<section class="safety-section">
+ <div class="section-wrap safety-inner"><div><div class="eyebrow">SAFETY COMES FIRST</div><h2>What To Do During Floods</h2><p>Simple safety tips to help you stay safe during a flood. Follow trusted local guidance.</p></div>
+ <div class="safety-grid"><div>↗ <strong>Move to higher ground</strong><span>Move early when flooding threatens.</span></div><div>◉ <strong>Follow trusted updates</strong><span>Check local weather and authority announcements.</span></div><div>! <strong>Avoid floodwater</strong><span>Never walk or drive through floodwater.</span></div><div>＋ <strong>Protect essentials</strong><span>Keep drinking water and essential supplies safe.</span></div></div></div>
+</section>
+
+<section id="assistance" class="form-section section-wrap">
+ <div class="section-heading"><div><div class="eyebrow">YOU'RE NOT ALONE</div><h2>Request Assistance</h2><p>If you or your community have been affected by a disaster, tell us what you need and where you are.</p></div><span class="sample-tag">NO ACCOUNT NEEDED</span></div>
+ <form id="assistanceForm" class="form-card">
+  <div class="form-step"><b>01</b><div><h3>Personal Information</h3><p>Tell us who to contact about this request.</p></div></div>
+  <div class="form-grid"><label>Full name *<input name="full_name" required placeholder="Enter your full name"></label><label>Phone number *<input name="phone" required placeholder="+95 9 ..."></label><label>Email (optional)<input name="email" type="email" placeholder="you@example.com"></label></div>
+  <div class="form-step"><b>02</b><div><h3>Location Information</h3><p>Help relief teams locate you or the affected community.</p></div></div>
+  <div class="form-grid"><label>State / Region *<select name="region" required><option value="">Select state or region</option><option>Mandalay Region</option><option>Yangon Region</option><option>Bago Region</option><option>Shan State</option><option>Kayin State</option><option>Other</option></select></label><label>Township *<input name="township" required placeholder="Enter township"></label><label class="full">Village / Street *<input name="address" required placeholder="Enter village, ward or street name"></label></div>
+  <div class="form-step"><b>03</b><div><h3>Assistance Details</h3><p>Share the needs of your household or community.</p></div></div>
+  <label>Assistance category *<div class="check-grid"><label><input type="checkbox" name="categories" value="Food"> Food</label><label><input type="checkbox" name="categories" value="Clean Water"> Clean Water</label><label><input type="checkbox" name="categories" value="Medical Supplies"> Medical Supplies</label><label><input type="checkbox" name="categories" value="Shelter"> Shelter</label><label><input type="checkbox" name="categories" value="Clothing"> Clothing</label><label><input type="checkbox" name="categories" value="Rescue Support"> Rescue Support</label><label><input type="checkbox" name="categories" value="Other"> Other</label></div></label>
+  <div class="form-grid"><label>Number of affected people *<input name="people_affected" type="number" min="1" required placeholder="e.g. 5"></label><label>Urgency level *<select name="urgency" required><option value="">Select urgency</option><option>Low</option><option>Medium</option><option>High</option><option>Critical</option></select></label></div>
+  <label>Description of the situation *<textarea name="description" rows="4" required placeholder="Tell us about current conditions, urgent needs and barriers to reaching you."></textarea></label>
+  <label>Preferred contact method<select name="contact_method"><option>Phone call</option><option>SMS</option><option>Email</option></select></label>
+  <label class="consent"><input type="checkbox" required> I confirm that the information provided is accurate.</label>
+  <p class="form-warning">This is not a monitored emergency service. In immediate danger, contact trusted local emergency services or nearby rescue teams. Submission does not guarantee assistance or a response time.</p>
+  <button class="btn btn-primary" type="submit">Submit Request →</button><div class="form-message" role="status"></div>
+ </form>
+</section>
+
+<section id="volunteer" class="volunteer-band">
+ <div class="section-wrap volunteer-inner"><div><div class="eyebrow">TURN COMPASSION INTO ACTION</div><h2>Be a Volunteer.<br><span>Make a Difference.</span></h2><p>Your time and skills can help communities move forward — from organizing supplies to supporting local recovery.</p></div>
+ <form id="volunteerForm" class="form-card compact-form"><h3>Volunteer Registration</h3><p class="muted">Your skills, interests and availability help coordinators consider suitable opportunities.</p>
+ <div class="form-grid"><label>Full name *<input name="full_name" required></label><label>Email *<input name="email" type="email" required></label><label>Phone number *<input name="phone" required></label><label>Age *<input name="age" type="number" min="13" max="100" required></label><label>Preferred location *<input name="location" required placeholder="State / Township or remote"></label><label>Available days *<input name="available_days" required placeholder="e.g. Saturday, Sunday"></label></div>
+ <label>Skills and experience *<textarea name="skills" rows="2" required placeholder="Languages, training, logistics, community outreach..."></textarea></label>
+ <label>Areas of interest *<input name="interests" required placeholder="Medical support, logistics, fundraising..."></label>
+ <label>Why do you want to volunteer? *<textarea name="motivation" rows="3" required></textarea></label>
+ <label class="consent"><input type="checkbox" required> I agree to follow volunteer safety guidance and consent to being contacted about opportunities.</label>
+ <p class="form-warning">Do not travel to affected areas or begin relief work without an agreed role and safety briefing.</p>
+ <button class="btn btn-primary" type="submit">Submit Application →</button><div class="form-message" role="status"></div></form></div>
+</section>
+
+<section id="donation" class="donation-section section-wrap"><div class="donation-copy"><div class="eyebrow">GIVE HOPE. HELP REBUILD.</div><h2>Your Support Can<br><span>Make a Difference.</span></h2><p>Help make food, clean water and essential supplies available to affected families. Every act of generosity matters.</p><div class="donation-points"><span>✓ Demo contribution only</span><span>✓ No real payment is processed</span></div></div>
+ <form id="donationForm" class="form-card donation-card"><h3>Make a Demo Donation</h3><p class="muted">No account needed. This is a project demonstration, not a real payment.</p>
+ <label>Donor name *<input name="donor_name" required placeholder="Your name"></label><label>Email *<input name="email" type="email" required placeholder="you@example.com"></label>
+ <label>Donation amount (MMK) *<div class="amount-options"><button type="button" data-amount="10000">10,000</button><button type="button" data-amount="25000" class="selected">25,000</button><button type="button" data-amount="50000">50,000</button></div><input name="amount" id="donationAmount" type="number" min="1000" required value="25000"></label>
+ <label>Donation purpose *<select name="purpose"><option>Food</option><option>Clean Water</option><option>Medical Supplies</option><option>Shelter</option><option>General Relief</option></select></label>
+ <button class="btn btn-primary btn-block" type="submit">Preview Donation →</button><div class="form-message" role="status"></div></form>
+</section>
+
+<section id="auth" class="auth-section section-wrap"><div><div class="eyebrow">YOUR MINGALARAID ACCOUNT</div><h2>Welcome to<br><span>MingalarAid.</span></h2><p>Create an account to stay informed and support communities.</p></div>
+ <div class="form-card auth-card"><div class="auth-tabs"><button class="active" data-tab="login">Login</button><button data-tab="register">Create Account</button></div>
+ <form id="loginForm"><h3>Welcome back</h3><label>Email<input name="email" type="email" required></label><label>Password<input name="password" type="password" required></label><button class="btn btn-primary btn-block">Login</button><div class="form-message"></div></form>
+ <form id="registerForm" hidden><h3>Create your account</h3><label>Full name<input name="full_name" required></label><label>Email<input name="email" type="email" required></label><label>Password<input name="password" type="password" minlength="8" required placeholder="At least 8 characters"></label><button class="btn btn-primary btn-block">Create Account</button><div class="form-message"></div></form>
+ <button id="logoutBtn" class="text-button" hidden>Logout</button><div id="userStatus" class="muted"></div></div></section>
+
+<section id="about" class="about-section section-wrap"><div class="eyebrow">ABOUT MINGALARAID</div><h2>A helping hand. A stronger tomorrow.</h2><p class="about-lead">When disasters disrupt lives, connection matters. MingalarAid brings affected communities, volunteers, donors and relief organizations together — making it easier to find help and lend a hand.</p><div class="values-grid"><div><b>Compassion</b><span>Put dignity and care at the heart of every interaction.</span></div><div><b>Transparency</b><span>Communicate clearly about information, needs and limitations.</span></div><div><b>Community</b><span>Listen to local voices and work together with respect.</span></div><div><b>Responsibility</b><span>Encourage safe, thoughtful and accountable action.</span></div></div></section>
+</main>
+<footer><div class="section-wrap footer-inner"><div><a class="brand" href="#home"><img src="assets/mingalaraid-mark.svg" alt=""><span>Mingalar<span class="brand-accent">Aid</span></span></a><p>Connecting communities with care, information and support. Together, we can help Myanmar recover and rebuild.</p></div><div><b>Quick Links</b><a href="#home">Home</a><a href="#about">About Us</a><a href="#disasters">Disaster Updates</a><a href="#assistance">Request Assistance</a></div><div><b>Contact Information</b><span>Email: support@mingalaraid.org</span><span>Myanmar</span><small>This is not a monitored emergency service.</small></div></div><div class="copyright">© 2026 MingalarAid. Together, for a stronger tomorrow.</div></footer>
+<div id="toast" class="toast" role="status"></div>
+<script src="js/app.js"></script>
+</body></html>
