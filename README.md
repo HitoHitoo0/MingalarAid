@@ -1,4 +1,4 @@
-edit in congig.py 
+edit in config.py 
 
 
 import os
